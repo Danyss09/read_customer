@@ -16,7 +16,7 @@ def connect_to_db():
         if conn.is_connected():
             return conn
     except Error as e:
-        print(f"Error al conectar a MySQL: {e}")
+        print(f"Error al conectar a la base MySQL: {e}")
         return None
 
 # Endpoint para actualizar un cliente

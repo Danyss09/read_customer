@@ -9,6 +9,7 @@ def get_customers_route():
     if "error" in response:
         return jsonify({"error": response["error"]}), 500
     return jsonify({"customers": response})
+
 @customer_bp.route('/get_customer/<int:customer_id>', methods=['GET'])
 def get_customer_route(customer_id):
     response = get_customer_by_id(customer_id)
